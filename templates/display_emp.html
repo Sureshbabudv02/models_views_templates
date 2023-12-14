@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td
+        {
+            padding: 5px;
+            text-align: center;
+        }
+        body
+        {
+            background-color: lightcyan;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1><u>Employee Table:-</u></h1>
+        <table border="3px">
+            <tr>
+                <th>dept_No</th>
+                <th>emp_No</th>
+                <th>emp_Name</th>
+                <th>job</th>
+                <th>mgr</th>
+                <th>hiredate</th>
+                <th>sal</th>
+                <th>comm</th>
+                <th>email</th>
+            </tr>
+        {% for eo in QLEO %}
+        <tr>
+            <td>{{ eo.dept_No}}</td>
+            <td>{{ eo.emp_No}}</td>
+            <td>{{ eo.emp_Name}}</td>
+            <td>{{ eo.job}}</td>
+            <td>{{ eo.mgr}}</td>
+            <td>{{ eo.hiredate}}</td>
+            <td>{{ eo.sal}}</td>
+            <td>{{ eo.comm}}</td>
+            <td>{{ eo.email}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
